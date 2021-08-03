@@ -17,16 +17,19 @@
   <link href="{{ asset('assets/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{ asset('assets/demo/demo.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  @stack('styles')
+
 </head>
 
 <body class="">
   <div class="wrapper ">
-      
+
     @include('admin.layouts.sidebar')
 
     <div class="main-panel">
       <!-- Navbar -->
-     
+
         @include('admin.layouts.navbar')
 
       <!-- End Navbar -->
@@ -262,6 +265,8 @@
 
     });
   </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+@stack('scripts')
 </body>
 
 </html>

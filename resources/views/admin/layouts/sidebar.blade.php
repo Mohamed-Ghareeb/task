@@ -12,15 +12,15 @@
           </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="{{ route('companies.index') }}">
+          <a class="nav-link" href="{{ route('courses.index') }}">
             <i class="material-icons">content_paste</i>
-            <p>Companies</p>
+            <p>Courses</p>
           </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="{{ route('employees.index') }}">
+          <a class="nav-link" href="{{ route('categories.index') }}">
             <i class="material-icons">person</i>
-            <p>Employess</p>
+            <p>Categories</p>
           </a>
         </li>
       </ul>

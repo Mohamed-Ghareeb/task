@@ -14,18 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group([
-    'prefix' => 'auth'
 
-], function ($router) {
-
-    Route::post('login', 'Api\\AuthController@login');
-    Route::post('logout', 'Api\\AuthController@logout');
-});
-
-
-Route::prefix('admin')->middleware(['auth:api', 'is_admin'])->group(function () {    
-    Route::resource('companies', 'Api\\CompanyController');
-    Route::resource('employees', 'Api\\EmployeeController');
-
+Route::middleware('api_password')->group(function () {
+    Route::post('showAllCategories', 'Api\\CategoriesController');
+    Route::post('showAllCourses', 'Api\\CoursesController');
 });
